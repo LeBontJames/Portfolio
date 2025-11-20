@@ -122,24 +122,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
         <div className="mobile-menu-header">
-          <a href="#top" className="mobile-menu-logo" onClick={(e) => handleLinkClick(e, '#top')} key={animationKey} ref={mobileLogoRef}>
-            {words[currentWordIndex].split('').map((char, index) => {
-              const typingDelay = index * 0.1;
-              const deleteDelay = words[currentWordIndex].length * 0.1 + 0.5 + (words[currentWordIndex].length - index - 1) * 0.05;
-              return (
-                <span key={index} style={{
-                  animationDelay: `${typingDelay}s, ${deleteDelay}s`
-                }}>{char}</span>
-              );
-            })}
-          </a>
-          <button 
-            className="mobile-menu-close"
-            onClick={closeMobileMenu}
-            aria-label="Close mobile menu"
-          >
-            ✕
-          </button>
+          {/* Logo rimosso */}
         </div>
         
         <nav className="mobile-menu-nav">
