@@ -473,10 +473,9 @@ https://templatemo.com/tm-594-nexus-flow
             position: fixed;
             top: 78px;
             right: -100%;
-            width: 80%;
-            max-width: 350px;
+            
             height: calc(100vh - 78px);
-            background: var(--darker-bg);
+            background: transparent;
             backdrop-filter: blur(20px);
             border-left: 2px solid var(--border-color);
             z-index: 9999;
@@ -1831,8 +1830,7 @@ https://templatemo.com/tm-594-nexus-flow
 
         @media (max-width: 480px) {
             .mobile-menu {
-                width: 90%;
-                max-width: none;
+                width: 180px;
             }
             
             .mobile-menu-header {
