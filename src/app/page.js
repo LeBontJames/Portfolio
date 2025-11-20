@@ -5,6 +5,7 @@ import Stats from '@/components/Stats';
 import Features from '@/components/Features';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import ScrollAnimations from '@/components/ScrollAnimations';
+import NewSection from '@/components/NewSection';
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Features />
+      <NewSection />
     </>
   );
 }
