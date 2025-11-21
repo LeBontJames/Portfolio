@@ -31,16 +31,16 @@ const NewSection = () => {
   return (
     <section ref={sectionRef} className="new-section-grid">
       <div className={`grid-item ${isVisible ? 'animate' : ''}`}>
-        <img src="/icons/call.svg" alt="Call" width={64} height={64} />
+        <img src="/icons/html.png" alt="Call" width={64} height={64} />
       </div>
       <div className={`grid-item ${isVisible ? 'animate' : ''}`}>
-        <img src="/icons/email.svg" alt="Email" width={64} height={64} />
+        <img src="/icons/javascript.png" alt="Email" width={64} height={64} />
       </div>
       <div className={`grid-item ${isVisible ? 'animate' : ''}`}>
-        <img src="/icons/whatsapp.svg" alt="Whatsapp" width={64} height={64} />
+        <img src="/icons/react.png" alt="Whatsapp" width={64} height={64} />
       </div>
       <div className={`grid-item ${isVisible ? 'animate' : ''}`}>
-        <img src="/icons/call.svg" alt="Call" width={64} height={64} />
+        <img src="/icons/php.png" alt="Call" width={64} height={64} />
       </div>
       <div className="text-item">Testo 1</div>
       <div className="text-item">Testo 2</div>
