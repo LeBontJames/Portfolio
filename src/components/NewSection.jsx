@@ -40,12 +40,12 @@ const NewSection = () => {
         <img src="/icons/react.png" alt="Whatsapp" width={64} height={64} />
       </div>
       <div className={`grid-item ${isVisible ? 'animate' : ''}`}>
-        <img src="/icons/php.png" alt="Call" width={64} height={64} />
+        <img src="/icons/wordpress.png" alt="Call" width={64} height={64} />
       </div>
-      <div className="text-item">Testo 1</div>
-      <div className="text-item">Testo 2</div>
-      <div className="text-item">Testo 3</div>
-      <div className="text-item">Testo 4</div>
+      <div className={`text-item ${isVisible ? 'animate' : ''}`}>HTML</div>
+      <div className={`text-item ${isVisible ? 'animate' : ''}`}>JavaScript</div>
+      <div className={`text-item ${isVisible ? 'animate' : ''}`}>React</div>
+      <div className={`text-item ${isVisible ? 'animate' : ''}`}>WordPress</div>
     </section>
   );
 };

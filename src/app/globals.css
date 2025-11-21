@@ -2044,7 +2044,7 @@ https://templatemo.com/tm-594-nexus-flow
         .scroll-to-top {
             position: fixed;
             bottom: 2rem;
-            right: 2rem;
+            right: 1px;
             width: 48px;
             height: 48px;
             background: rgba(249, 116, 22, 0.144);
@@ -2106,3 +2106,13 @@ https://templatemo.com/tm-594-nexus-flow
             height: 100vh;
           }
         }
+
+        @media (max-width: 600px) {
+  html, body {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+  }
+}
