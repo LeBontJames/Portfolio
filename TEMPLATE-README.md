@@ -22,7 +22,6 @@ Questo progetto integra completamente il template HTML/CSS/JS **NexusFlow** (Tem
 5. **`Features.jsx`** - Griglia di funzionalità con card
 6. **`Pricing.jsx`** - Piani di pricing con card
 7. **`Contact.jsx`** - Form di contatto con validazione
-8. **`CyberFooter.jsx`** - Footer del sito
 9. **`ScrollAnimations.jsx`** - Gestisce le animazioni al scroll
 
 ### Struttura File

@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
-        <CyberFooter />
+            {/* <CyberFooter /> Removed as per patch request */}
         <ScrollToTop />
       </body>
     </html>

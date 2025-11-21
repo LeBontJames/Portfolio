@@ -10,7 +10,6 @@
 - ✅ `Features.jsx` - Griglia features
 - ✅ `Pricing.jsx` - Card pricing
 - ✅ `Contact.jsx` - Form contatti
-- ✅ `CyberFooter.jsx` - Footer
 - ✅ `ScrollAnimations.jsx` - Animazioni scroll
 
 ### 2. Stili CSS

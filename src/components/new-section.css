@@ -1,0 +1,116 @@
+/* Personal CSS for NewSection grid */
+
+.new-section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #f8fafc1b;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  place-items: center;
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.grid-item {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Desktop: animazione dal basso */
+@media (min-width: 601px) {
+  .grid-item {
+    transform: translateY(100px);
+  }
+  
+  .grid-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .grid-item:nth-child(1).animate {
+    transition-delay: 0.1s;
+  }
+  
+  .grid-item:nth-child(2).animate {
+    transition-delay: 0.2s;
+  }
+  
+  .grid-item:nth-child(3).animate {
+    transition-delay: 0.3s;
+  }
+  
+  .grid-item:nth-child(4).animate {
+    transition-delay: 0.4s;
+  }
+}
+
+/* Mobile: animazione da sinistra */
+@media (max-width: 600px) {
+  .new-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .grid-item {
+    transform: translateX(-100px);
+  }
+  
+  .grid-item.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .grid-item:nth-child(1).animate {
+    transition-delay: 0.1s;
+  }
+  
+  .grid-item:nth-child(2).animate {
+    transition-delay: 0.2s;
+  }
+  
+  .grid-item:nth-child(3).animate {
+    transition-delay: 0.3s;
+  }
+  
+  .grid-item:nth-child(4).animate {
+    transition-delay: 0.4s;
+  }
+
+  .new-section-grid .grid-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .new-section-grid .grid-item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .new-section-grid .grid-item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .new-section-grid .grid-item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .new-section-grid .text-item:nth-child(5) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .new-section-grid .text-item:nth-child(6) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .new-section-grid .text-item:nth-child(7) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .new-section-grid .text-item:nth-child(8) {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
