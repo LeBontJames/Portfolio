@@ -5,6 +5,7 @@ const NewSection = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [animate, setAnimate] = useState(false);
+  const [scaleActive, setScaleActive] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,24 +45,35 @@ const NewSection = () => {
     }
   }, [isVisible]);
 
+  useEffect(() => {
+    if (animate) {
+      const timer = setTimeout(() => {
+        setScaleActive(true);
+      }, 2000); // Start scale animation 2s after entrance
+      return () => clearTimeout(timer);
+    } else {
+      setScaleActive(false); // Reset scale when not animating
+    }
+  }, [animate]);
+
   return (
     <section ref={sectionRef} className="new-section-grid">
-      <div className={`grid-item ${animate ? 'animate' : ''}`}>
+      <div className={`grid-item colonna-1 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>
         <img src="/icons/html.png" alt="Call" width={64} height={64} />
       </div>
-      <div className={`grid-item ${animate ? 'animate' : ''}`}>
+      <div className={`grid-item colonna-2 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>
         <img src="/icons/javascript.png" alt="Email" width={64} height={64} />
       </div>
-      <div className={`grid-item ${animate ? 'animate' : ''}`}>
+      <div className={`grid-item colonna-3 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>
         <img src="/icons/react.png" alt="Whatsapp" width={64} height={64} />
       </div>
-      <div className={`grid-item ${animate ? 'animate' : ''}`}>
+      <div className={`grid-item colonna-4 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>
         <img src="/icons/wordpress.png" alt="Call" width={64} height={64} />
       </div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>HTML</div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>JAVASCRIPT</div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>REACT</div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>WORDPRESS</div>
+      <div className={`text-item colonna-1 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>HTML</div>
+      <div className={`text-item colonna-2 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>JAVASCRIPT</div>
+      <div className={`text-item colonna-3 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>REACT</div>
+      <div className={`text-item colonna-4 ${animate ? 'animate' : ''} ${scaleActive ? 'scale-active' : ''}`}>WORDPRESS</div>
     </section>
   );
 };

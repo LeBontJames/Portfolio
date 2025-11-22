@@ -1,4 +1,11 @@
 /* Personal CSS for NewSection grid */
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.5); }
+  50% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
 .text-item.animate {
   opacity: 1;
   transform: translateX(0);
@@ -96,6 +103,12 @@
   .text-item {
     font-size: 1.2rem;
   }
+
+  /* Sequential scale animation for columns - infinite loop after entrance */
+  .colonna-1.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 0s; }
+  .colonna-2.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 2s; }
+  .colonna-3.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 4s; }
+  .colonna-4.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 6s; }
 }
 
 /* Mobile: animazione da sinistra */
@@ -121,19 +134,19 @@
   }
   
   .grid-item:nth-child(1).animate {
-    transition-delay: 0.1s;
-  }
-  
-  .grid-item:nth-child(2).animate {
     transition-delay: 0.2s;
   }
   
+  .grid-item:nth-child(2).animate {
+    transition-delay: 0.4s;
+  }
+  
   .grid-item:nth-child(3).animate {
-    transition-delay: 0.3s;
+    transition-delay: 0.6s;
   }
   
   .grid-item:nth-child(4).animate {
-    transition-delay: 0.4s;
+    transition-delay: 0.8s;
   }
 
   .new-section-grid .grid-item:nth-child(1) {
