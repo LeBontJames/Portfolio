@@ -29,13 +29,16 @@
 
   
   .grid-item {
-    transform: translateX(-100px);
+    align-self: end;
+    transform: translateY(-200px);
+    opacity: 0;
+  
   }
   
   .grid-item.animate {
     opacity: 1;
-    transform: translateX(0);
-    transform:translateY(150px);
+    transform: translateY(0);
+    
     
   }
   
@@ -57,30 +60,41 @@
 
   .text-item {
     opacity: 0;
-    transform: translateX(160px);
+    align-self: start;
+    transform: translateY(200px);
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .text-item.animate {
     opacity: 1;
-    transform: translateX(0);
-    transform: translateY(-100px);
+    transform: translateY(0);
+    
   }
 
   .text-item:nth-child(5).animate {
-    transition-delay: 0.1s;
-  }
-
-  .text-item:nth-child(6).animate {
     transition-delay: 0.2s;
   }
 
+  .text-item:nth-child(6).animate {
+    transition-delay: 0.4s;
+  }
+
   .text-item:nth-child(7).animate {
-    transition-delay: 0.3s;
+    transition-delay: 0.6s;
   }
 
   .text-item:nth-child(8).animate {
-    transition-delay: 0.4s;
+    transition-delay: 0.8s;
+  }
+
+  /* Increase size of grid items and text items on desktop */
+  .grid-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .text-item {
+    font-size: 1.2rem;
   }
 }
 
@@ -98,6 +112,7 @@
 
   .grid-item {
     transform: translateX(-160px);
+    opacity: 0;
   }
   
   .grid-item.animate {

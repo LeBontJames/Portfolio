@@ -32,10 +32,15 @@ const NewSection = () => {
 
   useEffect(() => {
     if (isVisible) {
-      const timer = setTimeout(() => {
-        setAnimate(true);
-      }, 500); // Delay of 500ms to wait for snap to settle
-      return () => clearTimeout(timer);
+      // Apply delay only on mobile devices
+      if (window.innerWidth <= 768) {
+        const timer = setTimeout(() => {
+          setAnimate(true);
+        }, 500); // Delay of 500ms to wait for snap to settle
+        return () => clearTimeout(timer);
+      } else {
+        setAnimate(true); // Immediate animation on desktop
+      }
     }
   }, [isVisible]);
 
