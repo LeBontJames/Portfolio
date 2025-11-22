@@ -105,10 +105,10 @@
   }
 
   /* Sequential scale animation for columns - infinite loop after entrance */
-  .colonna-1.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 0s; }
-  .colonna-2.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 2s; }
-  .colonna-3.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 4s; }
-  .colonna-4.scale-active { animation: scaleUp 8s ease infinite; animation-delay: 6s; }
+  .colonna-1.scale-active { animation: scaleUp 4s ease infinite; animation-delay: 0s; }
+  .colonna-2.scale-active { animation: scaleUp 4s ease infinite; animation-delay: 1s; }
+  .colonna-3.scale-active { animation: scaleUp 4s ease infinite; animation-delay: 2s; }
+  .colonna-4.scale-active { animation: scaleUp 4s ease infinite; animation-delay: 3s; }
 }
 
 /* Mobile: animazione da sinistra */
