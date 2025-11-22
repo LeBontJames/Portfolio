@@ -54,9 +54,9 @@ const NewSection = () => {
         <img src="/icons/wordpress.png" alt="Call" width={64} height={64} />
       </div>
       <div className={`text-item ${animate ? 'animate' : ''}`}>HTML</div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>JavaScript</div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>React</div>
-      <div className={`text-item ${animate ? 'animate' : ''}`}>WordPress</div>
+      <div className={`text-item ${animate ? 'animate' : ''}`}>JAVASCRIPT</div>
+      <div className={`text-item ${animate ? 'animate' : ''}`}>REACT</div>
+      <div className={`text-item ${animate ? 'animate' : ''}`}>WORDPRESS</div>
     </section>
   );
 };
